@@ -1,16 +1,18 @@
-# API for Users & Groups
-An Application, developed using Laravel Framework
+# User Management Application
+- Developed using Laravel Framework.
+- Provides API Endpoints according to the OpenAPI Specification.
+- Contains GitHub Actions [CI Scenario](https://github.com/Dima-RND-Tech/users/actions) for bulding the project, running Psalm analysis and unit testing before code reviews. 
 
 ## Main Code Folders
 
 | Folder | Description |
 | --- | --- |
-| [app/Http/Controllers/Api](https://github.com/Dima-RND-Tech/users/tree/main/app/Http/Controllers/Api) | API Controllers | 
-| [app/Http/Resources](https://github.com/Dima-RND-Tech/users/tree/main/app/Http/Resources) | Resources Classes |
-| [app/Models](https://github.com/Dima-RND-Tech/users/tree/main/app/Models) | Models Classes |
 | [app/Interfaces](https://github.com/Dima-RND-Tech/users/tree/main/app/Interfaces) | Interfaces |
-| [app/Providers](https://github.com/Dima-RND-Tech/users/tree/main/app/Providers) | Provider Classes |
 | [app/Services](https://github.com/Dima-RND-Tech/users/tree/main/app/Services) | Service Classes | 
+| [app/Models](https://github.com/Dima-RND-Tech/users/tree/main/app/Models) | Model Classes |
+| [app/Http/Resources](https://github.com/Dima-RND-Tech/users/tree/main/app/Http/Resources) | Resource Classes |
+| [app/Providers](https://github.com/Dima-RND-Tech/users/tree/main/app/Providers) | Provider Classes |
+| [app/Http/Controllers/Api](https://github.com/Dima-RND-Tech/users/tree/main/app/Http/Controllers/Api) | API Controllers | 
 | [database/migrations](https://github.com/Dima-RND-Tech/users/tree/main/database/migrations) | Database Migrations | 
 | [tests/Feature](https://github.com/Dima-RND-Tech/users/tree/main/tests/Feature) | Feature Tests | 
 | [storage/api-docs/api-docs.json](https://github.com/Dima-RND-Tech/users/tree/main/storage/api-docs/api-docs.json) | OpenAPI Documentation | 
@@ -24,7 +26,7 @@ An Application, developed using Laravel Framework
 
 | Database Structure | Main Classes | 
 | :---: | :---: |
-| <img src="https://user-images.githubusercontent.com/110030000/221865173-1ed75ebd-cfb7-4b7f-b18e-3320dc7c646a.png" width="500" height="320"> | <img src="https://user-images.githubusercontent.com/110030000/221867333-bb6a4e52-0dcc-4753-9c42-43c85bb4a810.png" width="500" height="320"> |
+| <img src="https://user-images.githubusercontent.com/110030000/221865173-1ed75ebd-cfb7-4b7f-b18e-3320dc7c646a.png" width="500" height="320"> | <img src="https://user-images.githubusercontent.com/110030000/221877234-32bdb44a-4916-4421-859f-c4c6b36b4d76.png" width="500" height="320"> |
 | API Endpoints | Endpoint users/create |
 | <img src="https://user-images.githubusercontent.com/110030000/221867340-72cc91b9-87d4-40c5-a356-e5f787075b46.png" width="500" height="380"> | <img src="https://user-images.githubusercontent.com/110030000/221867345-5d57cf7a-5d1c-41d5-93c3-6787892c0e47.png" width="500" height="380"> |
 |  API Schemas | Endpoint users/delete | 
@@ -61,7 +63,3 @@ Run tests
 ```
 
 Open in browser: [http://project.local/](http://project.local/)
-
-## Notes
-
-- GitHub Actions [CI Scenario](https://github.com/Dima-RND-Tech/users/actions) for bulding the project, running Psalm analysis and unit testing before code reviews. 
