@@ -32,8 +32,11 @@ jobs:
       - name: Add hosts to /etc/hosts
         run: sudo echo "127.0.0.1 project-db" | sudo tee -a /etc/hosts
 
-      - name: Copy .env
+      - name: Create .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+
+      - name: Create .env.testing
+        run: php -r "file_exists('.env.testing') || copy('.env.example', '.env.testing');"
 
       - name: Install Dependencies
         run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
