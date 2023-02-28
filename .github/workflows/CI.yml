@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Add hosts to /etc/hosts
-        run: sudo echo "127.0.0.1 flashcards-db" | sudo tee -a /etc/hosts
+        run: sudo echo "127.0.0.1 project-db" | sudo tee -a /etc/hosts
 
       - name: Copy .env
         run: php -r "file_exists('.env') || copy('.env.example', '.env');"
