@@ -36,6 +36,8 @@ cp .env.example .env
 ./vendor/bin/sail up -d
 
 ./vendor/bin/sail artisan key:generate
+
+./vendor/bin/sail migrate --seed
 ```
 
 Run tests
@@ -45,4 +47,4 @@ Run tests
 
 ## Notes
 
-- Using GitHub Actions, I configured [CI Scenario](https://github.com/Dima-RND-Tech/users/actions) for bulding the project, running Psalm analysis and unit testing before code reviews. 
+- GitHub Actions [CI Scenario](https://github.com/Dima-RND-Tech/users/actions) for bulding the project, running Psalm analysis and unit testing before code reviews. 
