@@ -17,7 +17,7 @@ abstract class TestCase extends BaseTestCase
         $this->prepareForTests();
     }
 
-    // Migrate the database
+    // Migrate & Seed the database
     private function prepareForTests()
     {
         Artisan::call('migrate --seed');
