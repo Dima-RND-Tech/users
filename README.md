@@ -13,10 +13,10 @@ An Application, developed using Laravel Framework
 | [app/Services](https://github.com/Dima-RND-Tech/users/tree/main/app/Services) | Service Classes | 
 | [database/migrations](https://github.com/Dima-RND-Tech/users/tree/main/database/migrations) | Database Migrations | 
 | [tests/Feature](https://github.com/Dima-RND-Tech/users/tree/main/tests/Feature) | Feature Tests | 
-| [storage/api-docs/api-json.js](https://github.com/Dima-RND-Tech/users/tree/main/storage/api-docs/api-json.js) | OpenAPI Documentaion | 
+| [storage/api-docs/api-docs.json](https://github.com/Dima-RND-Tech/users/tree/main/storage/api-docs/api-docs.json) | OpenAPI Documentation | 
 
 ## Minimum Requirements
-- PHP 8.2
+- PHP 8.1
 - Composer
 - Docker
 
@@ -42,13 +42,16 @@ cp .env.example .env
 
 ./vendor/bin/sail artisan key:generate
 
-./vendor/bin/sail migrate --seed
+./vendor/bin/sail artisan migrate --seed
 ```
 
 Run tests
 ```
 ./vendor/bin/sail artisan test
 ```
+
+Open in browser
+[http://project.local/](http://project.local/)
 
 ## Notes
 
