@@ -20,7 +20,7 @@ abstract class TestCase extends BaseTestCase
     // Migrate & Seed the database
     private function prepareForTests()
     {
-        Artisan::call('migrate --seed');
+        Artisan::call('migrate:fresh --seed');
     }
 
 }
