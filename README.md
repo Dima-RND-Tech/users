@@ -62,4 +62,13 @@ Run tests
 ./vendor/bin/sail artisan test
 ```
 
-Open in browser: [http://project.local/](http://project.local/)
+## Browsing & Using the API Endpoints
+
+Open in browser:
+
+[http://project.local/api/documentation/](http://project.local/api/documentation/)
+
+Default API Key for checking Endpoints:
+```
+$2y$10$Sljvx5p3jAMMYpvJCbXi7OP/oIGctAqy83xKgMKpZDA1pOSWjHth.
+```
