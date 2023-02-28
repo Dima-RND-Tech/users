@@ -26,13 +26,13 @@
 
 | Database Structure | Processes | 
 | :---: | :---: |
-| <img src="https://user-images.githubusercontent.com/110030000/221865173-1ed75ebd-cfb7-4b7f-b18e-3320dc7c646a.png" width="500" height="320"> | <img src="https://user-images.githubusercontent.com/110030000/221897478-b3f77163-76d8-4255-90ef-9ab416c6e048.png" width="500" height="320"> |
-| API Endpoints | Endpoint users/create |
-| <img src="https://user-images.githubusercontent.com/110030000/221867340-72cc91b9-87d4-40c5-a356-e5f787075b46.png" width="500" height="320"> | <img src="https://user-images.githubusercontent.com/110030000/221867345-5d57cf7a-5d1c-41d5-93c3-6787892c0e47.png" width="500" height="320"> |
-|  API Schemas | Endpoint users/delete | 
-| <img src="https://user-images.githubusercontent.com/110030000/221867342-3a800dd1-82dd-4d86-ba0f-51e16bd11e08.png" width="500" height="310"> |  <img src="https://user-images.githubusercontent.com/110030000/221867348-d18af210-42b9-4700-831c-9659c401e149.png" width="500" height="310"> |
+| <img src="https://user-images.githubusercontent.com/110030000/221865173-1ed75ebd-cfb7-4b7f-b18e-3320dc7c646a.png" width="460" height="250"> | <img src="https://user-images.githubusercontent.com/110030000/221897478-b3f77163-76d8-4255-90ef-9ab416c6e048.png" width="460" height="250"> |
+| API Endpoints | Create User Endpoint |
+| <img src="https://user-images.githubusercontent.com/110030000/221867340-72cc91b9-87d4-40c5-a356-e5f787075b46.png" width="460" height="250"> | <img src="https://user-images.githubusercontent.com/110030000/221867345-5d57cf7a-5d1c-41d5-93c3-6787892c0e47.png" width="460" height="250"> |
+|  API Schemas | Delete User Endpoint | 
+| <img src="https://user-images.githubusercontent.com/110030000/221867342-3a800dd1-82dd-4d86-ba0f-51e16bd11e08.png" width="460" height="250"> |  <img src="https://user-images.githubusercontent.com/110030000/221867348-d18af210-42b9-4700-831c-9659c401e149.png" width="460" height="250"> |
 | Main Classes |
-| <img src="https://user-images.githubusercontent.com/110030000/221877234-32bdb44a-4916-4421-859f-c4c6b36b4d76.png" width="500" height="320"> |
+| <img src="https://user-images.githubusercontent.com/110030000/221877234-32bdb44a-4916-4421-859f-c4c6b36b4d76.png" width="460" height="250"> |
 
 ## Installation
 
