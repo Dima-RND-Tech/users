@@ -1,7 +1,9 @@
 # User Management Application
 - Developed using Laravel Framework.
 - Provides API Endpoints according to the OpenAPI Specification.
-- Contains GitHub Actions [CI Scenario](https://github.com/Dima-RND-Tech/users/actions) for bulding the project, running Psalm analysis and unit testing before code reviews. 
+- Contains **[CI Scenario](https://github.com/Dima-RND-Tech/users/actions)** using GitHub Actions for bulding the project, running Psalm analysis and unit testing before code reviews. 
+- Automatically generated **API Documentaion**: [https://dima-rnd-tech.readme.io/reference](https://dima-rnd-tech.readme.io/reference)
+
 
 ## Main Code Folders
 
