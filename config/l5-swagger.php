@@ -295,8 +295,7 @@ return [
          */
         'constants' => [
             'L5_SWAGGER_CONST_HOST_LOCAL' => env('APP_URL') . '/api',
-            'L5_SWAGGER_API_VERSION' => config('app.api_version'),
-
+            'L5_SWAGGER_API_VERSION' => env('API_VERSION'),
         ],
     ],
 ];
