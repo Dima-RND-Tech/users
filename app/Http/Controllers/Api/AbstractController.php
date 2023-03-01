@@ -14,8 +14,8 @@ use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 /**
  * @OA\Info(
- *      title="Project API",
- *      description="Project API",
+ *      title="User Management System API",
+ *      description="API Endpoints for getting and changing users, groups & roles",
  *      version=L5_SWAGGER_API_VERSION
  * ),
  *
