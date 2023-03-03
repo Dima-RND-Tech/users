@@ -92,7 +92,7 @@ class CreateController extends AbstractController
             }
 
             // Save a new user & return result
-            return $this->responseCreated($this->userService->create($request->post('name'), $request->post('roleId')));
+            return $this->responseCreated($this->userService->create($request->post('name'), intval($request->post('roleId'))));
 
         } catch (UserException $e) {
 
