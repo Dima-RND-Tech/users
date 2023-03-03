@@ -3,6 +3,7 @@
 namespace Tests\Feature\Api\User;
 
 use App\Models\Role;
+use App\Models\User;
 use Tests\TestCase;
 
 class CreateTest extends TestCase
@@ -30,5 +31,36 @@ class CreateTest extends TestCase
                 ]
             )
             ->assertHeader('Content-Type', 'application/json');
+    }
+
+    /**
+     * Bad Request (no data)
+     *
+     * @return void
+     */
+    public function testBadRequest(): void
+    {
+        $this->withHeaders(['x-api-key' => env('API_KEY_DEFAULT')])
+            ->json('post', self::ENDPOINT)
+            ->assertBadRequest()
+        ;
+    }
+
+    /**
+     * Bad Request (user exists)
+     *
+     * @return void
+     */
+    public function testAlreadyExists(): void
+    {
+        $user = User::first();
+
+        $this->withHeaders(['x-api-key' => env('API_KEY_DEFAULT')])
+            ->json('post', self::ENDPOINT, [
+                'name' => $user->name,
+                'roleId' => $user->role_id
+            ])
+            ->assertBadRequest()
+        ;
     }
 }

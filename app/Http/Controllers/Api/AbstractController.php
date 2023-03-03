@@ -70,8 +70,17 @@ abstract class AbstractController extends Controller
         return response()->json($content)->setStatusCode(SymfonyResponse::HTTP_CREATED);
     }
 
-    protected function responseBadRequest(string $message = 'Bad Request')
+    protected function responseBadRequest(string|array $input = 'Bad Request')
     {
+        // Concat validator messages
+        if (is_array($input)) {
+            $message = '';
+            foreach ($input as $values) {
+                $message.= implode(' ', $values);
+            }
+        } else {
+            $message = $input;
+        }
         return response($message, SymfonyResponse::HTTP_BAD_REQUEST);
     }
 

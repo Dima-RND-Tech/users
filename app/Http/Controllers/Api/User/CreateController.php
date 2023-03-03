@@ -7,6 +7,7 @@ use App\Exceptions\UserException;
 use App\Http\Controllers\Api\AbstractController;
 use App\Interfaces\RoleServiceInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CreateController extends AbstractController
 {
@@ -80,18 +81,18 @@ class CreateController extends AbstractController
             // Check operation allowance
             $this->checkPermission($request, RoleServiceInterface::PERMISSION_USERS_CREATE);
 
-            // Check body params
-            $body = $request->post();
-            if (empty($body['name'])) {
-                return $this->responseBadRequest('Invalid Name');
-            }
+            // Validate request
+            $validator = Validator::make($request->post(), [
+                'name' => 'required|unique:groups|max:64',
+                'roleId'=> 'required|exists:roles,id|integer'
+            ]);
 
-            if (empty($body['roleId'])) {
-                return $this->responseBadRequest('Invalid Role ID');
+            if ($validator->fails()) {
+                return $this->responseBadRequest($validator->messages()->toArray());
             }
 
             // Save a new user & return result
-            return $this->responseCreated($this->userService->create($body['name'], $body['roleId']));
+            return $this->responseCreated($this->userService->create($request->post('name'), $request->post('roleId')));
 
         } catch (UserException $e) {
 

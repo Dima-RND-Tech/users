@@ -17,9 +17,9 @@ class GetTest extends TestCase
     public function testSuccessStructure(): void
     {
         $this->withHeaders(['x-api-key' => env('API_KEY_DEFAULT')])
-            ->json('get', self::ENDPOINT.'/'.User::first()->id)
+            ->json('get', self::ENDPOINT . '/' . User::first()->id)
             ->assertOk()
-           ->assertJsonStructure(
+            ->assertJsonStructure(
                 [
                     'id',
                     'roleId',
@@ -27,5 +27,18 @@ class GetTest extends TestCase
                 ]
             )
             ->assertHeader('Content-Type', 'application/json');
+    }
+
+    /**
+     * Not Found
+     *
+     * @return void
+     */
+    public function testNotFound(): void
+    {
+        $this->withHeaders(['x-api-key' => env('API_KEY_DEFAULT')])
+            ->json('get', self::ENDPOINT . '/-1')
+            ->assertNotFound()
+           ;
     }
 }

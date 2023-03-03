@@ -7,6 +7,7 @@ use App\Exceptions\StorageException;
 use App\Http\Controllers\Api\AbstractController;
 use App\Interfaces\RoleServiceInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class CreateController extends AbstractController
 {
@@ -80,14 +81,17 @@ class CreateController extends AbstractController
             // Check operation allowance
             $this->checkPermission($request, RoleServiceInterface::PERMISSION_GROUPS_CREATE);
 
-            // Check body
-            $body = $request->post();
-            if (empty($body['name'])) {
-                return $this->responseBadRequest();
+            // Validate request
+            $validator = Validator::make($request->post(), [
+                'name' => 'required|unique:groups|max:64',
+            ]);
+
+            if ($validator->fails()) {
+                return $this->responseBadRequest($validator->messages()->toArray());
             }
 
             // Save a new group & respond
-            return $this->responseCreated($this->groupService->create($body['name']));
+            return $this->responseCreated($this->groupService->create($request->post('name')));
 
         } catch (GroupException $e) {
 
